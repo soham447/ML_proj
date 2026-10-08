@@ -2,23 +2,6 @@
 
 A webcam-based custom gesture/sign recognizer.
 
-Unlike the earlier alphabet-only project, this system lets you teach it ANY named sign or gesture by recording examples.
-
-Examples:
-
-- hello
-- thank_you
-- yes
-- no
-- stop
-- help
-- come_here
-- good
-- bad
-- peace
-- thumbs_up
-- custom_gesture_1
-
 The model learns short sequences of hand landmarks, so it can recognize both static and moving gestures better than a single-frame classifier.
 
 ## How it works
@@ -46,26 +29,6 @@ Sentence builder
 ```
 
 The feature vector contains both hands and motion information across multiple frames.
-
-## Install
-
-Create a virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-Linux/macOS:
-
-```bash
-source .venv/bin/activate
-```
 
 Install:
 
@@ -95,20 +58,7 @@ Perform the sign naturally for about 1-2 seconds.
 
 The program automatically saves one sequence.
 
-Record at least 30-50 sequences for each sign.
-
-Example classes:
-
-```text
-hello
-thank_you
-yes
-no
-help
-stop
-good
-bad
-```
+Record at least 20 sequences for each sign.
 
 You can create as many custom classes as you want.
 
@@ -159,21 +109,3 @@ During recording:
 
 - `R` -> record one sequence
 - `Q` -> quit
-
-## Important
-
-This is a custom gesture/sign recognition framework, not a universal sign-language translator.
-
-For a sign to be recognized, it must be represented in your training data.
-
-For example, if you want:
-
-```text
-hello
-```
-
-you record examples of your own `hello` sign.
-
-The sequence model can learn movement, but recognition quality depends heavily on the quantity and variety of training data.
-
-For production-grade sign-language translation, additional information such as facial landmarks, body pose, temporal neural networks, language modeling, and a much larger dataset would be needed.
